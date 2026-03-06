@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>총총쌤의 여행스토리</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Nanum+Pen+Script&family=Jua&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FFCE00;
+            --bg-color: #FFFEF5;
+            --text-color: #333333;
+            --accent-color: #F39C12;
+            --desc-color: #4E342E;
+            --card-bg: #ffffff;
+            --shadow-color: rgba(255, 206, 0, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+
+        header { position: fixed; top: 0; width: 100%; background: rgba(255, 254, 245, 0.95); backdrop-filter: blur(8px); z-index: 1000; padding: 20px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        nav { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo { font-size: 2.2rem; font-family: 'Nanum Pen Script', cursive; color: var(--accent-color); text-decoration: none; }
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { text-decoration: none; color: var(--text-color); font-size: 1.1rem; font-family: 'Jua', sans-serif; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-color); border-bottom: 2px solid var(--accent-color); }
+
+        main { flex: 1; margin-top: 100px; padding: 60px 20px; max-width: 1100px; margin-left: auto; margin-right: auto; }
+        h2 { font-size: 2.8rem; text-align: center; font-family: 'Jua', sans-serif; margin-bottom: 50px; }
+        h2::after { content: ''; display: block; width: 60px; height: 5px; background: var(--primary-color); margin: 15px auto; border-radius: 10px; }
+
+        .travel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; }
+        .travel-card { background: #fff; border-radius: 30px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f0f0f0; }
+        .travel-img-box { width: 100%; height: 240px; background: #f9f9f9; display: flex; justify-content: center; align-items: center; font-size: 5rem; position: relative; }
+        .travel-tag { position: absolute; top: 20px; left: 20px; background: var(--primary-color); color: #fff; padding: 5px 15px; border-radius: 20px; font-family: 'Jua', sans-serif; font-size: 0.9rem; }
+        .travel-content { padding: 30px; }
+        .travel-content h4 { font-family: 'Jua', sans-serif; font-size: 1.6rem; margin-bottom: 12px; color: var(--desc-color); }
+        .travel-content p { color: #666; font-size: 1rem; }
+
+        footer { text-align: center; padding: 50px 20px; background: #fff; }
+        .contact-btn { display: inline-block; background: var(--primary-color); color: #fff; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-family: 'Jua', sans-serif; transition: 0.3s; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><span class="logo-icon">👍</span>총총쌤</a>
+            <ul class="nav-links">
+                <li><a href="index.html">기본소개</a></li>
+                <li><a href="travel.html" class="active">여행스토리</a></li>
+                <li><a href="life.html">나의일상</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>나의 여행스토리 ✈️</h2>
+        <div class="travel-grid">
+            <div class="travel-card">
+                <div class="travel-img-box">
+                    <span class="travel-tag">전통과 여유</span>
+                    🏯
+                </div>
+                <div class="travel-content">
+                    <h4>경주에서의 힐링 산책</h4>
+                    <p>AI로 재해석한 한옥의 미를 찾아 떠난 경주 여행. 대릉원의 완만한 곡선을 보며 새로운 교육 커리큘럼을 구상하곤 합니다.</p>
+                </div>
+            </div>
+            <div class="travel-card">
+                <div class="travel-img-box">
+                    <span class="travel-tag">가을 감성</span>
+                    🍂
+                </div>
+                <div class="travel-content">
+                    <h4>붉게 물든 산사의 가을</h4>
+                    <p>가을이 오면 붉은 낙엽 소리를 듣는 것이 즐거워요. 복잡한 도심을 벗어나 아들과 함께 조용히 걷는 소중한 시간입니다.</p>
+                </div>
+            </div>
+            <div class="travel-card">
+                <div class="travel-img-box">
+                    <span class="travel-tag">디지털 노마드</span>
+                    🌊
+                </div>
+                <div class="travel-content">
+                    <h4>바다 소리를 들으며 작업하기</h4>
+                    <p>파도 소리를 배경 삼아 노트북을 켜고 AI 아트를 만드는 여행. 어디든 저의 작업실이자 배움의 공간이 됩니다.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="mailto:choimi82@naver.com" class="contact-btn">📫 choimi82@naver.com</a>
+        <p style="font-size: 0.9rem; margin-top: 30px; color: #bbb;">&copy; 2024 총총쌤 Choi Mi. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
